@@ -22,7 +22,7 @@
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 
-const int chipSelect = 4; // BUAT SD CARD YG ASLINYA ERROR TAR COBA PAKE INI
+const int chipSelect = 4; 
 
 float Celsius;
 float Offset_suhu;
@@ -124,7 +124,7 @@ void setup() {
     Serial.println("RTC has set the system time");
     
   if (!SD.begin(chipSelect)) {
-  //if (!SD.begin(10, 11, 12, 13)) {              //DILAPTOP INI ERROR BAGIAN INI KAYANYA LIBRARY GA COCOK COBA PELAJARI LAGI SEMENTARA PAKE CHIPSELECT
+  //if (!SD.begin(10, 11, 12, 13)) {              
     Serial.println("Gagal Membuka Micro SD!");
     return;
   }
